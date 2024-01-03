@@ -17,9 +17,8 @@ app.use(express.json());
 
 // Função para carregar configurações do arquivo JSON
 const loadRoutes = () => {
-  const filePath = path.join(process.cwd(), 'routes.json');
   try {
-    const content = fs.readFileSync(filePath, 'utf-8');
+    const content = fs.readFileSync(path.join(process.cwd(), program.opts().routes), 'utf-8');
     return JSON.parse(content);
   } catch (error) {
     console.error('Erro ao carregar configurações:', error.message);
