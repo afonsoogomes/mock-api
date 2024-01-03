@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -17,7 +15,7 @@ app.use(express.json());
 
 // Função para carregar configurações do arquivo JSON
 const loadRoutes = () => {
-  const filePath = path.join(__dirname, 'routes.json');
+  const filePath = path.join(process.cwd(), program.opts().routes);
   try {
     const content = fs.readFileSync(filePath, 'utf-8');
     return JSON.parse(content);
