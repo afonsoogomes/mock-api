@@ -14,7 +14,7 @@ program
 const app = express();
 const port = Number(program.opts().port);
 
-app.use(express.cors());
+app.use(cors());
 app.use(express.json());
 
 // Função para carregar configurações do arquivo JSON
