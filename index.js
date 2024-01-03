@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const express = require('express');
+const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
 const { program } = require('commander');
@@ -13,6 +14,7 @@ program
 const app = express();
 const port = Number(program.opts().port);
 
+app.use(express.cors());
 app.use(express.json());
 
 // Função para carregar configurações do arquivo JSON
