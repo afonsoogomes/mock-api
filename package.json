@@ -1,5 +1,5 @@
 {
-  "name": "mock-api-json",
+  "name": "@afonso.oliveiragomes/api-mock-json",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "mock-api-json": "./index.js"
+    "api-mock-json": "./index.js"
   },
   "keywords": [],
   "author": "",
